@@ -18,29 +18,16 @@ class STBAmount(ISTBAmount):
 
     def insert(self, amount):
         self.available = self.available + amount
-        return self
+        return self.available
 
     def update_insert(self, last_amount, new_amount):
         self.available = self.available - last_amount + new_amount
-        return self
+        return self.available
 
     def update_remove(self, last_amount, new_amount):
         self.available = self.available + last_amount - new_amount
-        return self
+        return self.available
 
     def remove(self, amount):
         self.available = self.available - amount
-        return self
-
-    def get(self):
         return self.available
-
-# sf = SFCalculator(10)
-# sf.insert(1)
-# print("insert: {}".format(sf.get()))
-# sf.update_insert(1, 2)
-# print("update insert: {}".format(sf.get()))
-# sf.update_remove(1, 2)
-# print("update remove: {}".format(sf.get()))
-# sf.remove(1)
-# print("remove: {}".format(sf.get()))

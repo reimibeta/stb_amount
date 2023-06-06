@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='stb_amount',
-    version='1.0.0',
+    version='1.0.1',
     description='stabilize add, update and delete',
     long_description='stabilize add, update and delete',
     author='ReimiBeta',
